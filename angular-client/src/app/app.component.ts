@@ -18,23 +18,23 @@ export class  AppComponent implements OnInit {
 
   }
 
+
+
   fileChange(element) {
     this.uploadedFiles = element.target.files;
-}
-
-
-
+ }
 
 
 
 upload() {
   let formData = new FormData();
-  for (var i = 0; i < this.uploadedFiles.length; i++) {
-      formData.append("upload[]", this.uploadedFiles[i], this.uploadedFiles[i].name);
-  }
+
+  //for (var i = 0; i < this.uploadedFiles.length; i++) {
+      formData.append("upload[]", this.uploadedFiles[0], this.uploadedFiles[0].name);
+  //}
   this.http.post('/api/upload', formData)
   .subscribe((response) => {
-       console.log('response received is ', response);
+       //console.log('response received is ', response);
   })
 }
 
@@ -44,12 +44,13 @@ getvideos(){
   for(var i =0; i < this.uploadedFiles.length;i++){
      video+=
   }
+
   this.http.get('/api',)
   .subscribe((response)=>
   console.log('response received is',response));
 }
-*/
 
+*/
 
 
 
