@@ -1,0 +1,21 @@
+
+
+
+<div class="header">
+  <h1 >Angular file upload</h1>
+</div>
+
+
+<div  class="grp">         
+<form method="post" action="/api/upload" enctype="multipart/form-data">
+
+
+   
+  <input type="submit" (click)= "upload()"  name="upload file">
+  
+  <input  (change)= "fileChange($event)"      type="file" name="filename" placeholder="choose file">
+ 
+</form>
+
+
+</div>
